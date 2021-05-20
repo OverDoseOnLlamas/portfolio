@@ -1,0 +1,86 @@
+:root {
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #111418;
+  --bg-secondary: #141418;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-left: 16rem;
+  padding: 1rem;
+}
+
+.background {
+  background-image: url("./images/johnbackground.jpg");
+  background-size: cover;
+  height: 96.55vh;
+}
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.719);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 16rem;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 16rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 7rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .nav-item {
+  width: 100%;
+  border: white;
+  border-width: 20px;
+} */
+
+.nav-link {
+  display: flex;
+  margin-top: 2.5rem;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.nav-link:hover {
+  color: #198165;
+}
+
+.rounded-circle {
+  width: 10rem;
+  margin-top: 10rem;
+  margin-left: 3rem;
+  border-radius: 10rem;
+  border: solid 2px #eeeeee;
+}
