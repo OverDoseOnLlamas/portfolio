@@ -14,19 +14,6 @@ body {
   padding: 0;
 }
 
-#img-home {
-  height: 100vh;
-  max-width: 100vw;
-  object-fit: cover;
-  position: relative;
-  margin: auto;
-}
-
-.layer {
-  background-color: rgba(0, 0, 0, 0.4); /*0.719*/
-  position: absolute;
-}
-
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -46,17 +33,80 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
-.socials {
-  position: absolute;
-  align-items: center center;
+/* Index page */
+
+#img-home {
+  height: 100vh;
+  max-width: 100vw;
+  object-fit: cover;
+  position: relative;
+  margin: auto;
 }
+
+.layer {
+  background-color: rgba(0, 0, 0, 0.4); /*0.719*/
+  position: absolute;
+}
+
+/* About page */
 
 .grid {
   display: grid;
-  grid-template-columns: 500px 500px 1fr;
-  grid-template-rows: 200px 200px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "about-photo about-text";
+  column-gap: 10px;
   border-radius: 1px;
   border: solid black;
+  margin: 5rem 7rem;
+}
+
+.about-photo > about-img {
+  grid-area: about-photo;
+  object-fit: cover;
+  align-items: center;
+  height: 50%;
+}
+
+.about-text {
+  grid-area: about-text;
+}
+/* Works page */
+
+/* Contact page */
+.title-contact {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.socials {
+  position: absolute;
+  bottom: 0px;
+  margin-left: 35%;
+  margin-bottom: 80px;
+}
+
+.btn-social {
+  font-size: 4rem;
+  margin-left: 10px;
+  text-decoration: none;
+  color: grey;
+  transition: 0.5s;
+}
+
+.linkedin:hover {
+  color: #0a66c2;
+}
+
+.github:hover {
+  color: black;
+}
+
+.facebook:hover {
+  color: #2d88ff;
+}
+
+.email:hover {
+  color: black;
 }
 
 /* @media only screen and (max-width: 575px) {
