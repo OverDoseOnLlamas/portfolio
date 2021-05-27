@@ -54,28 +54,38 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-areas: "about-photo about-text";
-  column-gap: 10px;
-  border-radius: 1px;
-  border: solid black;
+  column-gap: 4rem;
+  /* border-radius: 1px;
+  border: solid black; */
   margin: 5rem 7rem;
 }
 
-.about-photo > about-img {
+#about-img {
   grid-area: about-photo;
   object-fit: cover;
   align-items: center;
-  height: 50%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
-.about-text {
+#about-text {
   grid-area: about-text;
+  /* text-align: center; */
 }
+
 /* Works page */
 
 /* Contact page */
+
 .title-contact {
   text-align: center;
   margin-top: 60px;
+}
+
+#info-contact {
+  font-size: 24;
+  text-align: center;
 }
 
 .socials {
