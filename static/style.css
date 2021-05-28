@@ -52,9 +52,15 @@ body {
 
 .grid {
   display: grid;
+  grid-template-areas:
+    "about-photo about-overview"
+    "about-education about-education"
+    "about-volunteering about-volunteering"
+    "about-work about-work"
+    "about-hobbies about-hobbies";
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "about-photo about-text";
-  column-gap: 4rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 8rem;
   /* border-radius: 1px;
   border: solid black; */
   margin: 5rem 7rem;
@@ -63,15 +69,39 @@ body {
 #about-img {
   grid-area: about-photo;
   object-fit: cover;
-  align-items: center;
   width: 100%;
   max-width: 400px;
   height: auto;
 }
 
-#about-text {
-  grid-area: about-text;
-  /* text-align: center; */
+#about-overview {
+  grid-area: about-overview;
+  /* background-color: red; */
+  text-align: center;
+}
+
+#about-edu {
+  grid-area: about-education;
+  /* background-color: orange; */
+}
+
+#about-volunteering {
+  grid-area: about-volunteering;
+  /* background-color: orange; */
+}
+
+#about-work {
+  grid-area: about-work;
+  /* background-color: brown; */
+}
+
+#about-hobbies {
+  grid-area: about-hobbies;
+  /* background-color: green; */
+}
+
+.about-text {
+  text-align: center;
 }
 
 /* Works page */
@@ -117,6 +147,49 @@ body {
 
 .email:hover {
   color: black;
+}
+
+/* XXL screens change to 1200*/
+@media only screen and (min-width: 10px) {
+  main {
+    margin-left: 16rem;
+  }
+
+  .layer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-left: 16rem;
+    padding: 1rem;
+  }
+
+  .navbar {
+    top: 0;
+    width: 16rem;
+    height: 100vh;
+  }
+
+  .nav-link:hover {
+    color: #198165;
+  }
+
+  .rounded-circle {
+    width: 10rem;
+    margin-top: 10rem;
+    margin-left: 3rem;
+    border-radius: 10rem;
+    border: solid 2px #eeeeee;
+  }
+
+  .navbar-nav {
+    padding: 7rem 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    margin-top: 2.5rem;
+  }
 }
 
 /* @media only screen and (max-width: 575px) {
@@ -282,46 +355,3 @@ body {
     margin-top: 2.5rem;
   }
 } */
-
-/* XXL screens change to 1200*/
-@media only screen and (min-width: 10px) {
-  main {
-    margin-left: 16rem;
-  }
-
-  .layer {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-left: 16rem;
-    padding: 1rem;
-  }
-
-  .navbar {
-    top: 0;
-    width: 16rem;
-    height: 100vh;
-  }
-
-  .nav-link:hover {
-    color: #198165;
-  }
-
-  .rounded-circle {
-    width: 10rem;
-    margin-top: 10rem;
-    margin-left: 3rem;
-    border-radius: 10rem;
-    border: solid 2px #eeeeee;
-  }
-
-  .navbar-nav {
-    padding: 7rem 0;
-    margin: 0;
-  }
-
-  .nav-link {
-    margin-top: 2.5rem;
-  }
-}
