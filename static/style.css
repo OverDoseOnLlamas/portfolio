@@ -5,6 +5,7 @@
   --text-secondary: #ececec;
   --bg-primary: #111418;
   --bg-secondary: #141418;
+  --border-primary: rgb(115,108,237); /* #b3b3b3*/
 }
 
 body {
@@ -43,7 +44,7 @@ body {
 
 #img-home {
   height: 100vh;
-  max-width: 100vw;
+  min-width: 100vw;
   object-fit: cover;
   position: relative;
   margin: auto;
@@ -59,7 +60,7 @@ body {
   min-height: 50px;
   height: min-content;
   width: 650px;
-  background-color: rgba(169, 169, 169, 1);
+  background-color: rgba(204, 218, 209, 1);
   margin: auto auto;
 }
 
@@ -69,6 +70,47 @@ body {
 }
 
 /* About page */
+
+#about-grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: repeat(5, 350px);
+    column-gap: 5rem; 
+    row-gap: 6rem;
+    margin: 5rem clamp(2rem, 10vw, 7rem);
+}
+
+#about-overview {
+  grid-area: about-overview;
+  text-align: center;
+/*   border: solid 5px var(--border-primary); */
+}
+
+
+#about-edu {
+  grid-area: about-education;
+/*   border: solid 5px var(--border-primary); */
+}
+
+#about-volunteering {
+  grid-area: about-volunteering;
+/*   border: solid 5px var(--border-primary); */
+}
+
+about-work {
+  grid-area: about-work;
+/*   border: solid 5px var(--border-primary); */
+}
+
+#about-hobbies {
+  grid-area: about-hobbies;
+/*   border: solid 5px var(--border-primary); */
+}
+  
+.about-text {
+  text-align: center;
+  border: solid 5px var(--border-primary);
+}
 
 /* Works page */
 
@@ -166,84 +208,45 @@ body {
 
   /* About page */
 
-  #about-grid {
-    display: none;
+  #about-grid{
+    grid-template-areas:
+      "about-img-1 about-overview"
+      "about-education about-img-2"
+      "about-img-3 about-volunteering"
+      "about-work about-img-4"
+      "about-img-5 about-hobbies";
   }
   
-  .slideshow-container-outer{
-    display: grid;
-    padding: 0 clamp(100px, 10%, 300px);
-    margin-top: 150px;
+  .about-img{
+    height: 97%;
+    width: 98.8%;
+    object-fit: cover;
   }
   
-  /* Slideshow container */
-  .slideshow-container-inner {
-    position: relative;
-    background: #f1f1f1f1;
+  #about-img-1 {
+      grid-area: about-img-1;
+      border: solid 5px var(--border-primary);
+  } 
+  
+  #about-img-2 {
+    grid-area: about-img-2;
+    border: solid 5px var(--border-primary);
   }
+  
+  #about-img-3 {
+    grid-area: about-img-3;
+    border: solid 5px var(--border-primary);
+  } 
+  
+  #about-img-4 {
+    grid-area: about-img-4;
+    border: solid 5px var(--border-primary);
+  } 
 
-  /* Slides */
-  .mySlides {
-    display: none;
-    padding: 80px;
-    text-align: center;
-    min-height: 120px;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -30px;
-    padding: 16px;
-    color: #888;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-  }
-
-  /* The dot/bullet/indicator container */
-  .dot-container {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-  }
-
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-
-  /* Add a background color to the active dot/circle */
-  .active,
-  .dot:hover {
-    background-color: #717171;
-  }
+  #about-img-5 {
+    grid-area: about-img-5;
+    border: solid 5px var(--border-primary);
+  } 
 }
 
 /* mobile and tablet*/
@@ -294,172 +297,16 @@ body {
 
   /* About page */
 
-  .slideshow-container-outer{
-    display: none;
-  }
-
-  #about-grid {
-    display: grid;
+  #about-grid{
     grid-template-areas:
-      "about-overview"
-      "about-education"
-      "about-volunteering"
-      "about-work"
-      "about-hobbies";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 350px);
-    row-gap: 6rem;
-    margin: 5rem clamp(2rem, 10vw, 7rem);
+      "about-overview about-overview"
+      "about-education about-education"
+      "about-volunteering about-volunteering"
+      "about-work about-work"
+      "about-hobbies about-hobbies";
   }
 
-  #about-overview {
-    grid-area: about-overview;
-    text-align: center;
-  }
-
-  #about-edu {
-    grid-area: about-education;
-  }
-
-  #about-volunteering {
-    grid-area: about-volunteering;
-  }
-
-  #about-work {
-    grid-area: about-work;
-  }
-
-  #about-hobbies {
-    grid-area: about-hobbies;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-}
-
-/*
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .navbar {
-    top: 0;
-    width: 100vw;
-    height: 5rem;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-  }
-
-  .nav-link {
-    justify-content: center;
-  }
-
-  .nav-item {
-    width: calc(90% / 4);
-    margin-top: 1rem;
-  }
-
-  main {
-    margin-top: 5rem;
-  }
-
-  .rounded-circle {
+  .about-img{
     display: none;
   }
-
-  .background {
-    display: none;
-  }
-
-  .layer {
-    width: 100%;
-    height: 100%;
-  }
 }
-
-@media only screen and (min-width: 768) and (max-width: 991) {
-  .navbar {
-    top: 0;
-    width: 100vw;
-    height: 5rem;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-  }
-
-  .nav-link {
-    justify-content: center;
-  }
-
-  .nav-item {
-    width: calc(90% / 4);
-    margin-top: 1rem;
-  }
-
-  main {
-    margin-top: 5rem;
-  }
-
-  .rounded-circle {
-    display: none;
-  }
-
-  .background {
-    display: hidden;
-  }
-
-  .layer {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media only screen and (min-width: 992) and (max-width: 1199) {
-  main {
-    margin-left: 16rem;
-    padding: 1rem;
-  }
-
-  .background {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-
-  .layer {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    margin-left: 16rem;
-    padding: 1rem;
-  }
-
-  .navbar {
-    top: 0;
-    width: 16rem;
-    height: 100vh;
-  }
-
-  .nav-link:hover {
-    color: #198165;
-  }
-
-  .rounded-circle {
-    width: 10rem;
-    margin-top: 10rem;
-    margin-left: 3rem;
-    border-radius: 10rem;
-    border: solid 2px #eeeeee;
-  }
-
-  .navbar-nav {
-    padding: 7rem 0;
-    margin: 0;
-  }
-
-  .nav-link {
-    margin-top: 2.5rem;
-  }
-} */

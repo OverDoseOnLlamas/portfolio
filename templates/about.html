@@ -40,7 +40,7 @@
       <h1 style="margin-top: 3rem; text-align: center">About me</h1>
       <!-- Grid container -->
       <container id="about-grid">
-        <!--  -->
+        <img src="./static/images/about-img-1.png" id="about-img-1" class="about-img">
         <section id="about-overview" class="about-text">
           <h2>Overview</h2>
           <p>
@@ -48,12 +48,16 @@
             Dundee.
           </p>
         </section>
-
+        
+        <img src="./static/images/about-img-2.png" id="about-img-2" class="about-img">
         <section id="about-edu" class="about-text">
           <h3>Education history</h3>
-          <p>Degree: Lower Second Class Honours in BSc (Hons) Mathematics</p>
+          <p>9 GCSEs A to C</p>
+          <p>3 A-levels</p>
+          <p>Lower Second Class Honours in BSc (Hons) Mathematics</p>
         </section>
 
+        <img src="./static/images/about-img-3.png" id="about-img-3" class="about-img">
         <section id="about-volunteering" class="about-text">
           <h3>Volunteering</h3>
           <p>
@@ -62,93 +66,18 @@
           </p>
         </section>
 
+        <img src="./static/images/about-img-4.png" id="about-img-4" class="about-img">
         <section id="about-work" class="about-text">
           <h3>Work history</h3>
           <p>9 months Spar</p>
         </section>
 
+        <img src="./static/images/about-img-5.png" id="about-img-5" class="about-img">
         <section id="about-hobbies" class="about-text">
           <h3>Hobbies and Interests</h3>
           <p>Skiing Mathematics Cooking Baking Gaming Programming</p>
         </section>
       </container>
-      <div class="slideshow-container-outer">
-      <!-- Slideshow container -->
-        <div class="slideshow-container-inner">
-          <!-- Full-width slides/quotes -->
-          <div class="mySlides">
-            <h3>Overview</h3>
-            <p>
-              Hello I'm John, a mathematics graduate from the University of
-              Dundee.
-            </p>
-          </div>
-
-          <div class="mySlides">
-            <h3>Education history</h3>
-            <p>Degree: Lower Second Class Honours in BSc (Hons) Mathematics</p>
-          </div>
-
-          <div class="mySlides">
-            <h3>Volunteering</h3>
-            <p>
-              7 years at NCYP, 6 months at burnside youth group, childrens discos,
-              red sails festival, samaritans
-            </p>
-          </div>
-
-          <div class="mySlides">
-            <h3>Work history</h3>
-            <p>9 months Spar</p>
-          </div>
-
-          <div class="mySlides">
-            <h3>Hobbies and Interests</h3>
-            <p>Skiing Mathematics Cooking Baking Gaming Programming</p>
-          </div>
-
-          <!-- Next/prev buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-        <!-- Dots/bullets/indicators -->
-        <div class="dot-container">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-        </div>
-      </div>
     </main>
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      } 
-    </script>
   </body>
 </html>
